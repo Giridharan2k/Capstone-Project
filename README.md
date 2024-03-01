@@ -28,3 +28,20 @@
 8. Update the main.py
 9. Update the dvc.yaml
 10. Update the app.py
+
+### Mlflow
+
+1. Go to dagshub.com
+2. Create an account and click on new repository
+3. Then click on connect a repository and press github
+4. Select the repository which you want to integrate with mlflow then press connect button
+5. Then click on remote and copy the URI to use in script
+6. After that go to mlflow. MLflow supports dagshub so we use it to launch the MLflow server 
+7. Open command prompt and run the mlflow uri, username and password with the prefix of export like the following commands
+    ## export MLFLOW_TRACKING_URI = link
+    ## export MLFLOW_TRACKING_USERNAME = username
+    ## export MLFLOW_TRACKING_PASSWORD = passcode
+8. If it shows error, use set as prefix instead of using export like the below commands
+    ## set MLFLOW_TRACKING_URI = link
+    ## set MLFLOW_TRACKING_USERNAME = username
+    ## set MLFLOW_TRACKING_PASSWORD = passcode
