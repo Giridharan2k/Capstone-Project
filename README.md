@@ -45,3 +45,10 @@
     ## set MLFLOW_TRACKING_URI = link
     ## set MLFLOW_TRACKING_USERNAME = username
     ## set MLFLOW_TRACKING_PASSWORD = passcode
+
+### Steps to create DVC Pipeline
+
+1. Go through the dvc.yaml file then enter dvc init in command prompt
+2. Then enter dvc repro
+3. If it shows error enter this in your powershell 
+    ## $env:PYTHONPATH = "D:/Final Year Project/Capstone-Project;$env:PYTHONPATH"
