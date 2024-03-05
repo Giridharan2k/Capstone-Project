@@ -14,7 +14,7 @@ class ModelEvaluating:
         eval_config = config.get_evaluation_config()
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
-        ## evaluation.log_in_to_mlflow() #comment while running the dvc pipeline for faster execution
+        # evaluation.log_in_to_mlflow() #comment while running the dvc pipeline for faster execution
         
 if __name__ == "__main__":
     try:

@@ -52,3 +52,8 @@
 2. Then enter dvc repro
 3. If it shows error enter this in your powershell 
     ## $env:PYTHONPATH = "D:/Final Year Project/Capstone-Project;$env:PYTHONPATH"
+
+### AWS CICD Deployment
+
+1. Login to AWS Console
+2. Create IAM user for deployment
