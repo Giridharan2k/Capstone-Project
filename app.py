@@ -3,8 +3,7 @@ import os
 from flask_cors import CORS, cross_origin
 from src.KidneyProject.utils.common import decodeImage
 from src.KidneyProject.pipeline.prediction import PredictionPipeline
-
-
+from getpass import getpass
 
 os.putenv('LANG', 'en_US.UTF-8')
 os.putenv('LC_ALL', 'en_US.UTF-8')
@@ -23,7 +22,6 @@ class ClientApp:
 def home():
     return render_template('index.html')
 
-
 @app.route("/train", methods=['GET','POST'])
 @cross_origin()
 def trainRoute():
@@ -39,8 +37,15 @@ def predictRoute():
     result = clApp.classifier.predict()
     return jsonify(result)
 
+def ask_password():
+    while True:
+        password = getpass("Enter the password: ")
+        if password == "AishuGiri":
+            return True
+        else:
+            print("Wrong password. Enter the correct password.")
 
 if __name__ == "__main__":
-    clApp = ClientApp()
-
-    app.run(host='0.0.0.0', port=8080) #for AWS
+    if ask_password():
+        clApp = ClientApp()
+        app.run(host='0.0.0.0', port=8080)
