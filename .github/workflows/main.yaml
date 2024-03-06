@@ -75,6 +75,11 @@ jobs:
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
 
+      - name: Stop and remove existing container
+        run: |
+          docker stop KidneyProject || true
+          docker rm KidneyProject || true
+
       - name: Pull latest images
         run: |
           docker pull 211125321858.dkr.ecr.ap-southeast-2.amazonaws.com/kidneyproject:latest
