@@ -57,3 +57,38 @@
 
 1. Login to AWS Console, if you don't have an account give sign up
 2. Create IAM user for deployment
+3. Click on the user and create an user
+4. Enter an username and click on next
+5. After clicking it, set the permission option "Attach policies directly". Then add the policies mentioned below and click on next
+    ## AmazonEC2ContainerRegistryFullAccess
+    ## AmazonEC2FullAccess
+5. Then click create user
+6. Then click username "KidneyProject" and create access key
+7. Click on command line interface and click on next
+8. Then click create access key then download it as .csv file
+9. Redirect to homepage and search Elastic Container Registry (ECR) and click get started
+10. Make the visibility settings as private and set a repository name
+11. Copy the URI and save it safely
+12. Again come back to homepage and search EC2
+13. Then click on launch instance and enter the name in the textfield and click Ubuntu-Machine
+14. Then select the instance type as t2.large or t2.micro
+15. Then create key pair and set ESB volume as 32gb
+16. Click launch instance
+17. Click on instance ID and press connect
+18. Click on connect and run the following commands
+    ## sudo apt-get update -y
+    ## sudo apt-get upgrade
+    ## curl -fsSL https://get.docker.com -o get-docker.sh
+    ## sudo sh get-docker.sh
+    ## sudo usermod -aG docker ubuntu
+    ## newgrp docker
+19. Go to github project repository settings. Click on action then runners
+20. Then click on new self-hosted runners and select linux
+21. Copy the commands shown in the page and run it on the server of AWS
+22. If you go back to the runner, you can be able to see the runner
+23. Go to secret and variables in your github repository and click on actions then add secrets
+    ## AWS_ACCESS_KEY_ID
+    ## AWS_SECRET_ACCESS_KEY
+    ## AWS_REGION 
+    ## AWS_ECR_LOGIN_URI
+    ## ECR_REPOSITORY_NAME
