@@ -104,7 +104,7 @@ jobs:
 
       # - name: Stop and remove container if running
       #   run: |
-      #    docker ps -q --filter "name=KidneyProject" | grep -q . && docker stop KidneyProject && docker rm -fv KidneyProject
+      #   docker ps -q --filter "name=KidneyProject" | grep -q . && docker stop KidneyProject && docker rm -fv KidneyProject
 
       - name: Run Docker Image to serve users
         run: |
