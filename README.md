@@ -69,6 +69,7 @@
 9. Redirect to homepage and search Elastic Container Registry (ECR) and click get started
 10. Make the visibility settings as private and set a repository name
 11. Copy the URI and save it safely
+    ## save the URI - 211125321858.dkr.ecr.ap-southeast-2.amazonaws.com/kidneyproject
 12. Again come back to homepage and search EC2
 13. Then click on launch instance and enter the name in the textfield and click Ubuntu-Machine
 14. Then select the instance type as t2.large or t2.micro
