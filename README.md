@@ -55,5 +55,5 @@
 
 ### AWS CICD Deployment
 
-1. Login to AWS Console
+1. Login to AWS Console, if you don't have an account give sign up
 2. Create IAM user for deployment
