@@ -48,4 +48,4 @@ def ask_password():
 if __name__ == "__main__":
     if ask_password():
         clApp = ClientApp()
-        app.run(host='0.0.0.0', port=8080) #for AWS
+        app.run(host='0.0.0.0', port=8080) #for AWS cloud
