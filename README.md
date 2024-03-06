@@ -93,3 +93,5 @@
     ## AWS_REGION 
     ## AWS_ECR_LOGIN_URI
     ## ECR_REPOSITORY_NAME
+24. After that, click on security groups and add your port number
+25. Finally you can use the app using public IP:portnumber
